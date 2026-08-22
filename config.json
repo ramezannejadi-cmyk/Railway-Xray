@@ -25,10 +25,7 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct",
-      "settings": {
-        "domainStrategy": "UseIP"
-      }
+      "tag": "direct"
     },
     {
       "protocol": "blackhole",
@@ -42,17 +39,17 @@
         "type": "field",
         "outboundTag": "blocked",
         "domain": [
-          "domain:googleadservices.com",
-          "domain:googlesyndication.com",
-          "domain:doubleclick.net",
-          "domain:google-analytics.com",
-          "domain:adservice.google.com",
-          "domain:youtube-nocookie.com",
-          "domain:pagead2.googlesyndication.com",
-          "domain:ad.doubleclick.net",
-          "domain:static.doubleclick.net",
-          "domain:ads.youtube.com",
-          "domain:adserver.yahoo.com"
+          "googleadservices.com",
+          "googlesyndication.com",
+          "doubleclick.net",
+          "google-analytics.com",
+          "adservice.google.com",
+          "youtube-nocookie.com",
+          "pagead2.googlesyndication.com",
+          "ad.doubleclick.net",
+          "static.doubleclick.net",
+          "ads.youtube.com",
+          "adserver.yahoo.com"
         ]
       }
     ]
