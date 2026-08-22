@@ -1,7 +1,4 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
   "inbounds": [
     {
       "port": 8080,
@@ -39,17 +36,9 @@
         "type": "field",
         "outboundTag": "blocked",
         "domain": [
-          "googleadservices.com",
           "googlesyndication.com",
-          "doubleclick.net",
-          "google-analytics.com",
-          "adservice.google.com",
-          "youtube-nocookie.com",
-          "pagead2.googlesyndication.com",
-          "ad.doubleclick.net",
-          "static.doubleclick.net",
-          "ads.youtube.com",
-          "adserver.yahoo.com"
+          "googleadservices.com",
+          "doubleclick.net"
         ]
       }
     ]
