@@ -1,4 +1,7 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
       "port": 8080,
@@ -23,24 +26,6 @@
     {
       "protocol": "freedom",
       "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "blocked"
     }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "outboundTag": "blocked",
-        "domain": [
-          "googlesyndication.com",
-          "googleadservices.com",
-          "doubleclick.net"
-        ]
-      }
-    ]
-  }
+  ]
 }
