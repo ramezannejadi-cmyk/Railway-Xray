@@ -1,4 +1,7 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
       "port": 8080,
@@ -22,7 +25,10 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct"
+      "tag": "direct",
+      "settings": {
+        "domainStrategy": "UseIP"
+      }
     },
     {
       "protocol": "blackhole",
@@ -30,16 +36,23 @@
     }
   ],
   "routing": {
-    "domainStrategy": "IPIfNonMatch",
+    "domainStrategy": "AsIs",
     "rules": [
       {
         "type": "field",
         "outboundTag": "blocked",
         "domain": [
-          "geosite:category-ads-all",
-          "googlesyndication.com",
-          "googleadservices.com",
-          "doubleclick.net"
+          "domain:googleadservices.com",
+          "domain:googlesyndication.com",
+          "domain:doubleclick.net",
+          "domain:google-analytics.com",
+          "domain:adservice.google.com",
+          "domain:youtube-nocookie.com",
+          "domain:pagead2.googlesyndication.com",
+          "domain:ad.doubleclick.net",
+          "domain:static.doubleclick.net",
+          "domain:ads.youtube.com",
+          "domain:adserver.yahoo.com"
         ]
       }
     ]
