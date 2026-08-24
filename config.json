@@ -1,6 +1,6 @@
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "none"
   },
   "inbounds": [
     {
@@ -17,7 +17,9 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/"
+          "path": "/",
+          "maxEarlyData": 2048,
+          "earlyDataHeaderName": "Sec-WebSocket-Protocol"
         }
       }
     }
@@ -25,7 +27,10 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct"
+      "tag": "direct",
+      "settings": {
+        "domainStrategy": "AsIs"
+      }
     }
   ]
 }
