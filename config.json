@@ -9,15 +9,15 @@
       "settings": {
         "clients": [
           {
-            "id": "e4a71f8b-2d9c-4b31-8f1e-0a5681c2d9e0"
+            "id": "98bdfe3b-65f9-40b2-8631-af99803cc0de"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/"
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "gun"
         }
       }
     }
@@ -25,36 +25,7 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct",
-      "settings": {
-        "domainStrategy": "UseIP"
-      }
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "blocked"
+      "tag": "direct"
     }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "outboundTag": "blocked",
-        "domain": [
-          "domain:googleadservices.com",
-          "domain:googlesyndication.com",
-          "domain:doubleclick.net",
-          "domain:google-analytics.com",
-          "domain:adservice.google.com",
-          "domain:youtube-nocookie.com",
-          "domain:pagead2.googlesyndication.com",
-          "domain:ad.doubleclick.net",
-          "domain:static.doubleclick.net",
-          "domain:ads.youtube.com",
-          "domain:adserver.yahoo.com"
-        ]
-      }
-    ]
-  }
+  ]
 }
