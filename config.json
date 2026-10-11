@@ -16,10 +16,8 @@
       },
       "streamSettings": {
         "network": "grpc",
-        "wsSettings": {
-          "path": "/",
-          "maxEarlyData": 2048,
-          "earlyDataHeaderName": "Sec-WebSocket-Protocol"
+        "grpcSettings": {
+          "serviceName": "gun"
         }
       }
     }
