@@ -1,6 +1,6 @@
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "none"
   },
   "inbounds": [
     {
@@ -9,15 +9,17 @@
       "settings": {
         "clients": [
           {
-            "id": "98bdfe3b-65f9-40b2-8631-af99803cc0de"
+            "id": "e4a71f8b-2d9c-4b31-8f1e-0a5681c2d9e0"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "grpc",
-        "grpcSettings": {
-          "serviceName": "gun"
+        "network": "ws",
+        "wsSettings": {
+          "path": "/",
+          "maxEarlyData": 2048,
+          "earlyDataHeaderName": "Sec-WebSocket-Protocol"
         }
       }
     }
@@ -25,7 +27,10 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct"
+      "tag": "direct",
+      "settings": {
+        "domainStrategy": "AsIs"
+      }
     }
   ]
 }
