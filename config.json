@@ -1,16 +1,17 @@
+
 {
   "log": {
-    "loglevel": "none"
+    "loglevel": "warning"
   },
   "inbounds": [
     {
+      "listen": "0.0.0.0",
       "port": 8080,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "e4a71f8b-2d9c-4b31-8f1e-0a5681c2d9e0",
-            "flow": ""
+            "id": "e4a71f8b-2d9c-4b31-8f1e-0a5681c2d9e0"
           }
         ],
         "decryption": "none"
@@ -18,14 +19,8 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/",
-          "maxEarlyData": 2048,
-          "earlyDataHeaderName": "Sec-WebSocket-Protocol"
+          "path": "/"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
       }
     }
   ],
@@ -34,7 +29,7 @@
       "protocol": "freedom",
       "tag": "direct",
       "settings": {
-        "domainStrategy": "UseIP"
+        "domainStrategy": "AsIs"
       }
     }
   ]
