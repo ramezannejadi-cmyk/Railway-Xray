@@ -9,7 +9,8 @@
       "settings": {
         "clients": [
           {
-            "id": "e4a71f8b-2d9c-4b31-8f1e-0a5681c2d9e0"
+            "id": "e4a71f8b-2d9c-4b31-8f1e-0a5681c2d9e0",
+            "flow": ""
           }
         ],
         "decryption": "none"
@@ -21,6 +22,10 @@
           "maxEarlyData": 2048,
           "earlyDataHeaderName": "Sec-WebSocket-Protocol"
         }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
       }
     }
   ],
@@ -29,7 +34,7 @@
       "protocol": "freedom",
       "tag": "direct",
       "settings": {
-        "domainStrategy": "AsIs"
+        "domainStrategy": "UseIP"
       }
     }
   ]
